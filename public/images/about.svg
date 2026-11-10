@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="aboutShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="700" fill="url(#aboutBg)" />
+
+  <!-- Architectural Background Grid -->
+  <g opacity="0.08" stroke="#cbd5e1" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="700" />
+    <line x1="300" y1="0" x2="300" y2="700" />
+    <line x1="500" y1="0" x2="500" y2="700" />
+    <line x1="700" y1="0" x2="700" y2="700" />
+    <line x1="0" y1="150" x2="900" y2="150" />
+    <line x1="0" y1="350" x2="900" y2="350" />
+    <line x1="0" y1="550" x2="900" y2="550" />
+  </g>
+
+  <!-- Laptop / Workspace Setup -->
+  <g filter="url(#aboutShadow)" transform="translate(150, 100)">
+    <!-- Laptop Screen Outer -->
+    <rect x="50" y="50" width="500" height="320" rx="16" fill="#18181b" stroke="#3f3f46" stroke-width="2" />
+    <!-- Screen Bezel Camera -->
+    <circle cx="300" cy="65" r="3" fill="#52525b" />
+    <!-- Screen Inner Display -->
+    <rect x="66" y="80" width="468" height="274" rx="8" fill="url(#codeGrad)" />
+
+    <!-- Window Header -->
+    <rect x="66" y="80" width="468" height="28" fill="#0f172a" />
+    <circle cx="85" cy="94" r="4" fill="#ef4444" />
+    <circle cx="100" cy="94" r="4" fill="#f59e0b" />
+    <circle cx="115" cy="94" r="4" fill="#10b981" />
+    <text x="300" y="98" fill="#94a3b8" font-family="'Plus Jakarta Sans', monospace" font-size="11" text-anchor="middle">charan@niat-tamilnadu: ~/projects</text>
+
+    <!-- Code Editor UI Lines -->
+    <g transform="translate(85, 125)">
+      <!-- Tab Bar -->
+      <rect x="0" y="0" width="120" height="20" rx="4" fill="#334155" />
+      <text x="12" y="14" fill="#f8fafc" font-family="monospace" font-size="11">App.tsx</text>
+      
+      <!-- Code lines -->
+      <text x="0" y="45" fill="#38bdf8" font-family="monospace" font-size="12">import</text>
+      <text x="55" y="45" fill="#f8fafc" font-family="monospace" font-size="12">{ useState, useEffect } from 'react';</text>
+
+      <text x="0" y="70" fill="#c084fc" font-family="monospace" font-size="12">export default function</text>
+      <text x="180" y="70" fill="#facc15" font-family="monospace" font-size="12">Portfolio() {</text>
+
+      <text x="20" y="95" fill="#94a3b8" font-family="monospace" font-size="12">// First-year B.Tech Student @ NIAT</text>
+      <text x="20" y="120" fill="#38bdf8" font-family="monospace" font-size="12">const</text>
+      <text x="65" y="120" fill="#f8fafc" font-family="monospace" font-size="12">[student, setStudent] = useState({</text>
+      <text x="40" y="142" fill="#a7f3d0" font-family="monospace" font-size="11">name: 'Golla Hosuru Charan',</text>
+      <text x="40" y="162" fill="#a7f3d0" font-family="monospace" font-size="11">campus: 'NIAT, Tamil Nadu',</text>
+      <text x="40" y="182" fill="#a7f3d0" font-family="monospace" font-size="11">focus: 'Building with AI &amp; Web Tech'</text>
+      <text x="20" y="202" fill="#f8fafc" font-family="monospace" font-size="12">});</text>
+    </g>
+
+    <!-- Laptop Base -->
+    <path d="M 10 370 L 590 370 L 550 405 L 50 405 Z" fill="#27272a" stroke="#3f3f46" stroke-width="2" />
+    <rect x="250" y="372" width="100" height="6" rx="3" fill="#52525b" />
+  </g>
+
+  <!-- Desk Accents -->
+  <g transform="translate(150, 100)">
+    <!-- Coffee Mug -->
+    <rect x="630" y="320" width="40" height="50" rx="6" fill="#f1f5f9" />
+    <path d="M 670 330 C 685 330, 685 360, 670 360" fill="none" stroke="#f1f5f9" stroke-width="4" />
+    <!-- Steam -->
+    <path d="M 645 305 Q 640 295 645 285" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+    <path d="M 655 308 Q 660 298 655 288" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Notebook / Tech Notes -->
+    <rect x="-70" y="340" width="90" height="65" rx="4" fill="#3b82f6" opacity="0.9" transform="rotate(-10 0 350)" />
+    <line x1="-50" y1="360" x2="-5" y2="360" stroke="#fff" stroke-width="2" opacity="0.7" transform="rotate(-10 0 350)" />
+    <line x1="-50" y1="375" x2="-10" y2="375" stroke="#fff" stroke-width="2" opacity="0.7" transform="rotate(-10 0 350)" />
+  </g>
+
+  <!-- Label Badge -->
+  <g transform="translate(300, 580)">
+    <rect x="0" y="0" width="300" height="48" rx="24" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <text x="150" y="29" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="14" text-anchor="middle">
+      Practical Projects · NIAT, Tamil Nadu
+    </text>
+  </g>
+</svg>
