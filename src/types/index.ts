@@ -9,6 +9,7 @@ export interface Project {
   featured?: boolean;
   sort_order?: number;
   created_at?: string;
+  what_i_learned?: string | null;
 }
 
 export type SkillCategory = 'Frontend' | 'Tools' | 'Learning' | string;

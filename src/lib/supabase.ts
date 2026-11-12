@@ -125,12 +125,28 @@ CREATE TABLE IF NOT EXISTS public.projects (
   github_url TEXT,
   featured BOOLEAN DEFAULT false,
   sort_order INTEGER DEFAULT 0,
+  what_i_learned TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- Enable Row Level Security (RLS)
 ALTER TABLE public.projects ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow public read access to projects" ON public.projects FOR SELECT USING (true);
+
+-- Sample initial project for Charan
+INSERT INTO public.projects (title, description, image_url, tech_stack, live_url, github_url, featured, sort_order, what_i_learned) VALUES
+  (
+    'To-Do List App',
+    'A task manager with secure login where each user has their own private tasks. Supports priorities, categories, due dates, search, filters, drag-and-drop ordering and a progress tracker.',
+    '/images/todo-app.webp',
+    ARRAY['React', 'Vite', 'Tailwind CSS', 'Supabase', 'Vercel'],
+    'https://tws-sepia.vercel.app/',
+    'https://github.com/charangollahosuru4202-droid/TWS',
+    true,
+    1,
+    'Learned authentication, database design, row-level security and deployment.'
+  )
+ON CONFLICT DO NOTHING;
 
 -- 2. Skills table
 CREATE TABLE IF NOT EXISTS public.skills (
